@@ -1,0 +1,64 @@
+{
+	"data": [
+		{
+			"name": "Aries",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/1-aries.gif",
+			"description": "Known for their bold and confident nature, our Aries NFT features a fierce and fiery design that reflects the energy of this sign."
+		},
+		{
+			"name": "Taurus",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/2-tauras.gif",
+			"description": "Representing stability and practicality, our Taurus NFT features a grounded and earthy design that captures the essence of this sign."
+		},
+		{
+			"name": "Gemini",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/3-gemini.gif",
+			"description": "Known for their adaptability and quick wit, our Gemini NFT features a dynamic and dual-toned design that represents the dual nature of this sign."
+		},
+		{
+			"name": "Cancer",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/4-cancer.gif",
+			"description": "Representing emotion and intuition, our Cancer NFT features a delicate and watery design that captures the nurturing and sensitive nature of this sign."
+		},
+		{
+			"name": "Leo",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/5-leo.gif",
+			"description": "Known for their confidence and creativity, our Leo NFT features a bold and radiant design that reflects the vibrant energy of this sign."
+		},
+		{
+			"name": "Virgo",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/6-virgo.gif",
+			"description": "Representing practicality and attention to detail, our Virgo NFT features a refined and orderly design that embodies the analytical nature of this sign."
+		},
+		{
+			"name": "Libra",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/7-libra.gif",
+			"description": "Known for their balance and harmony, our Libra NFT features a graceful and harmonious design that captures the diplomatic qualities of this sign."
+		},
+		{
+			"name": "Scorpio",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/8-scorpio.gif",
+			"description": "Representing intensity and passion, our Scorpio NFT features a powerful and mysterious design that reflects the intense and transformative nature of this sign."
+		},
+		{
+			"name": "Sagittarius",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/9-sagittarius.gif",
+			"description": "Known for their adventurous and philosophical nature, our Sagittarius NFT features a bold and expansive design that captures the spirit of exploration and discovery."
+		},
+		{
+			"name": "Capricorn",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/10-capricorn.gif",
+			"description": "Representing ambition and discipline, our Capricorn NFT features a strong and structured design that embodies the practical and hardworking qualities of this sign."
+		},
+		{
+			"name": "Aquarius",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/11-aquarius.gif",
+			"description": "Known for their unconventional and innovative nature, our Aquarius NFT features a unique and forward-thinking design that reflects the rebellious and visionary qualities of this sign."
+		},
+		{
+			"name": "Pisces",
+			"image": "https://gateway.pinata.cloud/ipfs/QmcGrM6UZKav31BUL6M7tUKFLa4ver3TgwmvL82ESetxbP/12-pisces.gif",
+			"description": "Representing imagination and spirituality, our Pisces NFT features a dreamy and ethereal design that captures the intuitive and artistic nature of this sign."
+		}
+	]
+}
