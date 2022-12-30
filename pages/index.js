@@ -30,8 +30,9 @@ export default function Home() {
 
 	const connectWallet = async () => {
 		try {
-			const provider = await getProviderOrSigner(web3ModalRef, false);
+			await getProviderOrSigner(web3ModalRef, false);
 			setWalletConnected(true);
+			getSoldStatus();
 		} catch (error) {
 			console.log(error);
 		}
@@ -39,10 +40,9 @@ export default function Home() {
 
 	const getAllNFTdata = async () => {
 		try {
-			const provider = await getProviderOrSigner(web3ModalRef, false);
-			const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, provider);
-			const uri = await nftContract.allNFTsData();
-			const res = await fetch(uri);
+			const res = await fetch(
+				'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN'
+			);
 			const data = await res.json();
 			setNftData(data.data);
 		} catch (error) {
@@ -62,6 +62,9 @@ export default function Home() {
 	};
 
 	useEffect(() => {
+		if (!nftData.length) {
+			getAllNFTdata();
+		}
 		if (!walletConnected) {
 			web3ModalRef.current = new Web3Modal({
 				network: 'matic',
@@ -69,8 +72,6 @@ export default function Home() {
 				disableInjectedProvider: false,
 			});
 			connectWallet();
-			getAllNFTdata();
-			getSoldStatus();
 		}
 	}, [walletConnected]);
 
@@ -126,6 +127,13 @@ export default function Home() {
 					<p>
 						<strong>Each wallet can only mint 1 NFT!</strong>
 					</p>
+					{!walletConnected && (
+						<button
+							onClick={connectWallet}
+							className='mt-5 rounded-full py-2 px-3 bg-wwhite text-bblack font-macondo'>
+							Connect Wallet to Mint NFT
+						</button>
+					)}
 				</div>
 
 				{loading && <Loader />}
@@ -142,6 +150,7 @@ export default function Home() {
 								loading={loading}
 								key={i}
 								getSoldStatus={getSoldStatus}
+								walletConnected={walletConnected}
 							/>
 						);
 					})}

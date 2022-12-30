@@ -11,6 +11,7 @@ export default function Card({
 	setLoading,
 	loading,
 	getSoldStatus,
+	walletConnected,
 }) {
 	const mint = async () => {
 		try {
@@ -28,7 +29,7 @@ export default function Card({
 	};
 
 	return (
-		<div className='border border-wwhite rounded-lg font-lato flex flex-col justify-evenly items-center'>
+		<div className='border border-wwhite rounded-lg font-lato flex flex-col justify-evenly items-center py-4'>
 			<img
 				src={nft.image}
 				alt='NFT Image'
@@ -38,12 +39,14 @@ export default function Card({
 			/>
 			<h1 className='text-2xl font-macondo mb-3'>{nft.name}</h1>
 			<p className='w-5/6 text-center'>{nft.description}</p>
-			<button
-				onClick={mint}
-				disabled={isSold || loading}
-				className='rounded-full py-2 px-3 my-3 bg-wwhite text-bblack disabled:opacity-50'>
-				{isSold ? 'Sold out!' : 'Mint'}
-			</button>
+			{walletConnected && (
+				<button
+					onClick={mint}
+					disabled={isSold || loading}
+					className='rounded-full py-2 px-3 my-3 bg-wwhite text-bblack disabled:opacity-50'>
+					{isSold ? 'Sold out!' : 'Mint'}
+				</button>
+			)}
 		</div>
 	);
 }
