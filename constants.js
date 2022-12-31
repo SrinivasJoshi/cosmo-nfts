@@ -1,5 +1,5 @@
 export const NFT_CONTRACT_ADDRESS =
-	'0xc32A6450054B52eB6733Db8bb91623650a082AF2';
+	'0x7586049609a8cbe1dfeaaaf1c63bdc05de81a887';
 export const abi = [
 	{
 		inputs: [],
@@ -51,6 +51,110 @@ export const abi = [
 		type: 'event',
 	},
 	{
+		inputs: [],
+		name: 'renounceOwnership',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
+	},
+	{
+		inputs: [
+			{
+				internalType: 'address',
+				name: 'from',
+				type: 'address',
+			},
+			{
+				internalType: 'address',
+				name: 'to',
+				type: 'address',
+			},
+			{
+				internalType: 'uint256[]',
+				name: 'ids',
+				type: 'uint256[]',
+			},
+			{
+				internalType: 'uint256[]',
+				name: 'amounts',
+				type: 'uint256[]',
+			},
+			{
+				internalType: 'bytes',
+				name: 'data',
+				type: 'bytes',
+			},
+		],
+		name: 'safeBatchTransferFrom',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
+	},
+	{
+		inputs: [
+			{
+				internalType: 'address',
+				name: 'from',
+				type: 'address',
+			},
+			{
+				internalType: 'address',
+				name: 'to',
+				type: 'address',
+			},
+			{
+				internalType: 'uint256',
+				name: 'id',
+				type: 'uint256',
+			},
+			{
+				internalType: 'uint256',
+				name: 'amount',
+				type: 'uint256',
+			},
+			{
+				internalType: 'bytes',
+				name: 'data',
+				type: 'bytes',
+			},
+		],
+		name: 'safeTransferFrom',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
+	},
+	{
+		inputs: [
+			{
+				internalType: 'address',
+				name: 'operator',
+				type: 'address',
+			},
+			{
+				internalType: 'bool',
+				name: 'approved',
+				type: 'bool',
+			},
+		],
+		name: 'setApprovalForAll',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
+	},
+	{
+		inputs: [
+			{
+				internalType: 'uint256',
+				name: 'tokenId',
+				type: 'uint256',
+			},
+		],
+		name: 'TransaferNFT',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
+	},
+	{
 		anonymous: false,
 		inputs: [
 			{
@@ -86,6 +190,19 @@ export const abi = [
 		],
 		name: 'TransferBatch',
 		type: 'event',
+	},
+	{
+		inputs: [
+			{
+				internalType: 'address',
+				name: 'newOwner',
+				type: 'address',
+			},
+		],
+		name: 'transferOwnership',
+		outputs: [],
+		stateMutability: 'nonpayable',
+		type: 'function',
 	},
 	{
 		anonymous: false,
@@ -170,162 +287,6 @@ export const abi = [
 		type: 'function',
 	},
 	{
-		inputs: [],
-		name: 'Cancer',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Capricorn',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Gemini',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Leo',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Libra',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Pisces',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Sagittarius',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Scorpio',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Taurus',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [
-			{
-				internalType: 'uint256',
-				name: 'tokenId',
-				type: 'uint256',
-			},
-		],
-		name: 'TransaferNFT',
-		outputs: [],
-		stateMutability: 'nonpayable',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'Virgo',
-		outputs: [
-			{
-				internalType: 'uint8',
-				name: '',
-				type: 'uint8',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [],
-		name: 'allNFTsData',
-		outputs: [
-			{
-				internalType: 'string',
-				name: '',
-				type: 'string',
-			},
-		],
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
 		inputs: [
 			{
 				internalType: 'address',
@@ -374,6 +335,45 @@ export const abi = [
 		type: 'function',
 	},
 	{
+		inputs: [],
+		name: 'Cancer',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
+		inputs: [],
+		name: 'Capricorn',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
+		inputs: [],
+		name: 'Gemini',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
 		inputs: [
 			{
 				internalType: 'address',
@@ -399,6 +399,32 @@ export const abi = [
 	},
 	{
 		inputs: [],
+		name: 'Leo',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
+		inputs: [],
+		name: 'Libra',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
+		inputs: [],
 		name: 'owner',
 		outputs: [
 			{
@@ -412,75 +438,41 @@ export const abi = [
 	},
 	{
 		inputs: [],
-		name: 'renounceOwnership',
-		outputs: [],
-		stateMutability: 'nonpayable',
+		name: 'Pisces',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
+			},
+		],
+		stateMutability: 'view',
 		type: 'function',
 	},
 	{
-		inputs: [
+		inputs: [],
+		name: 'Sagittarius',
+		outputs: [
 			{
-				internalType: 'address',
-				name: 'from',
-				type: 'address',
-			},
-			{
-				internalType: 'address',
-				name: 'to',
-				type: 'address',
-			},
-			{
-				internalType: 'uint256[]',
-				name: 'ids',
-				type: 'uint256[]',
-			},
-			{
-				internalType: 'uint256[]',
-				name: 'amounts',
-				type: 'uint256[]',
-			},
-			{
-				internalType: 'bytes',
-				name: 'data',
-				type: 'bytes',
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
 			},
 		],
-		name: 'safeBatchTransferFrom',
-		outputs: [],
-		stateMutability: 'nonpayable',
+		stateMutability: 'view',
 		type: 'function',
 	},
 	{
-		inputs: [
+		inputs: [],
+		name: 'Scorpio',
+		outputs: [
 			{
-				internalType: 'address',
-				name: 'from',
-				type: 'address',
-			},
-			{
-				internalType: 'address',
-				name: 'to',
-				type: 'address',
-			},
-			{
-				internalType: 'uint256',
-				name: 'id',
-				type: 'uint256',
-			},
-			{
-				internalType: 'uint256',
-				name: 'amount',
-				type: 'uint256',
-			},
-			{
-				internalType: 'bytes',
-				name: 'data',
-				type: 'bytes',
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
 			},
 		],
-		name: 'safeTransferFrom',
-		outputs: [],
-		stateMutability: 'nonpayable',
+		stateMutability: 'view',
 		type: 'function',
 	},
 	{
@@ -494,24 +486,6 @@ export const abi = [
 			},
 		],
 		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		inputs: [
-			{
-				internalType: 'address',
-				name: 'operator',
-				type: 'address',
-			},
-			{
-				internalType: 'bool',
-				name: 'approved',
-				type: 'bool',
-			},
-		],
-		name: 'setApprovalForAll',
-		outputs: [],
-		stateMutability: 'nonpayable',
 		type: 'function',
 	},
 	{
@@ -553,16 +527,16 @@ export const abi = [
 		type: 'function',
 	},
 	{
-		inputs: [
+		inputs: [],
+		name: 'Taurus',
+		outputs: [
 			{
-				internalType: 'address',
-				name: 'newOwner',
-				type: 'address',
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
 			},
 		],
-		name: 'transferOwnership',
-		outputs: [],
-		stateMutability: 'nonpayable',
+		stateMutability: 'view',
 		type: 'function',
 	},
 	{
@@ -579,6 +553,19 @@ export const abi = [
 				internalType: 'string',
 				name: '',
 				type: 'string',
+			},
+		],
+		stateMutability: 'view',
+		type: 'function',
+	},
+	{
+		inputs: [],
+		name: 'Virgo',
+		outputs: [
+			{
+				internalType: 'uint8',
+				name: '',
+				type: 'uint8',
 			},
 		],
 		stateMutability: 'view',

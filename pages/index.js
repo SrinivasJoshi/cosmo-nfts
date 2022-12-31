@@ -17,9 +17,9 @@ export default function Home({ data }) {
 		const web3Provider = new providers.Web3Provider(provider);
 
 		const { chainId } = await web3Provider.getNetwork();
-		if (chainId != 80001) {
-			window.alert('Change the network to Mumbai');
-			throw new Error('Change the network to Mumbai');
+		if (chainId != 137) {
+			window.alert('Change the network to Polygon Mainnet');
+			throw new Error('Change the network to Polygon Mainnet');
 		}
 		if (needSigner) {
 			const signer = web3Provider.getSigner();
@@ -150,7 +150,7 @@ export async function getStaticProps() {
 		'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN',
 		{
 			headers: {
-				Accept: 'application/json, text/plain, */*',
+				Accept: 'application/json',
 				'User-Agent': '*',
 			},
 		}
