@@ -5,10 +5,11 @@ import { abi, NFT_CONTRACT_ADDRESS } from '../constants';
 import Card from '../components/Card';
 import Loader from '../components/Loader';
 
-export default function Home({ data }) {
+export default function Home() {
 	const web3ModalRef = useRef();
 	const [walletConnected, setWalletConnected] = useState(false);
-	const [nftData, setNftData] = useState(data.data);
+
+	const [nftData, setNftData] = useState([]);
 	const [soldStatus, setSoldStatus] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -38,6 +39,20 @@ export default function Home({ data }) {
 		}
 	};
 
+	const getNftData = async () => {
+		const res = await fetch(
+			'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN',
+			{
+				headers: {
+					Accept: 'application/json',
+					'User-Agent': '*',
+				},
+			}
+		);
+		const data = await res.json();
+		setNftData(data.data);
+	};
+
 	const getSoldStatus = async () => {
 		try {
 			const provider = await getProviderOrSigner(web3ModalRef, false);
@@ -50,6 +65,7 @@ export default function Home({ data }) {
 	};
 
 	useEffect(() => {
+		getNftData();
 		if (!walletConnected) {
 			web3ModalRef.current = new Web3Modal({
 				network: 'matic',
@@ -145,20 +161,20 @@ export default function Home({ data }) {
 	);
 }
 
-export async function getStaticProps() {
-	const res = await fetch(
-		'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN',
-		{
-			headers: {
-				Accept: 'application/json',
-				'User-Agent': '*',
-			},
-		}
-	);
-	const data = await res.json();
-	return {
-		props: {
-			data,
-		},
-	};
-}
+// export async function getStaticProps() {
+// 	const res = await fetch(
+// 		'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN',
+// 		{
+// 			headers: {
+// 				Accept: 'application/json',
+// 				'User-Agent': '*',
+// 			},
+// 		}
+// 	);
+// 	const data = await res.json();
+// 	return {
+// 		props: {
+// 			data,
+// 		},
+// 	};
+// }
