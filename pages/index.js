@@ -4,12 +4,13 @@ import Web3Modal from 'web3modal';
 import { abi, NFT_CONTRACT_ADDRESS } from '../constants';
 import Card from '../components/Card';
 import Loader from '../components/Loader';
+import data from '../public/data.json';
 
 export default function Home() {
 	const web3ModalRef = useRef();
 	const [walletConnected, setWalletConnected] = useState(false);
 
-	const [nftData, setNftData] = useState([]);
+	const [nftData, setNftData] = useState(data.data);
 	const [soldStatus, setSoldStatus] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -39,20 +40,6 @@ export default function Home() {
 		}
 	};
 
-	const getNftData = async () => {
-		const res = await fetch(
-			'https://gateway.pinata.cloud/ipfs/QmV9EDCiWKqJ7PhkMd9nsL9E7g3Nr3jjSy6Y7EXeNMCpFN',
-			{
-				headers: {
-					Accept: 'application/json',
-					'User-Agent': '*',
-				},
-			}
-		);
-		const data = await res.json();
-		setNftData(data.data);
-	};
-
 	const getSoldStatus = async () => {
 		try {
 			const provider = await getProviderOrSigner(web3ModalRef, false);
@@ -65,7 +52,6 @@ export default function Home() {
 	};
 
 	useEffect(() => {
-		getNftData();
 		if (!walletConnected) {
 			web3ModalRef.current = new Web3Modal({
 				network: 'matic',

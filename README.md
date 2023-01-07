@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cosmo NFT
 
-## Getting Started
+**Checkout website: [Link](https://cosmo-nfts.vercel.app/)**
 
-First, run the development server:
+A platform for minting unique and collectible NFTs inspired by the zodiac signs. Each NFT is a one-of-a-kind digital asset that represents a specific zodiac sign and its associated characteristics.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Using blockchain technology, we securely record the ownership and details of each NFT using smart contracts. Our NFTs are available for all 12 zodiac signs, and each one features original artwork and a detailed description of the sign's personality traits and characteristics.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In addition to being unique and collectible, our NFTs are a great way to show off your astrological pride. As the popularity of NFTs continues to grow, the value of our NFTs is likely to increase over time, making them a smart investment as well as a fun collectible.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Purchasing one of our NFTs is easy. Simply browse our selection of NFTs, choose the one that represents your zodiac sign or speaks to you, and follow the prompts to complete your purchase. All transactions are securely processed using blockchain technology, and you will receive a digital certificate of ownership for your NFT.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Tech Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- OpenSea Link : **[Link](https://opensea.io/collection/cosmonfts)**
+- Frontend : Nextjs
+- Communication with blockchain : Ethers.js
+- Deployed and verified on : Polygon Mainnet
+- Tools used : Hardhat,Remix
+- NFT storage : IPFS using Pinata
+- Token type : ERC1155
