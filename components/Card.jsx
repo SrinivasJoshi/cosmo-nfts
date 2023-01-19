@@ -39,14 +39,14 @@ export default function Card({
 			/>
 			<h1 className='text-2xl font-macondo mb-3'>{nft.name}</h1>
 			<p className='w-5/6 text-center'>{nft.description}</p>
-			{/* {walletConnected && (
+			{walletConnected && (
 				<button
 					onClick={mint}
 					disabled={isSold || loading}
 					className='rounded-full py-2 px-3 my-3 bg-wwhite text-bblack disabled:opacity-50'>
 					{isSold ? 'Sold out!' : 'Mint'}
 				</button>
-			)} */}
+			)}
 		</div>
 	);
 }
